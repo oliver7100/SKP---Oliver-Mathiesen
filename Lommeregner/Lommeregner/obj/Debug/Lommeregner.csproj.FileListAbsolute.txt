@@ -1,0 +1,9 @@
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\bin\Debug\Lommeregner.exe.config
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\bin\Debug\Lommeregner.exe
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\bin\Debug\Lommeregner.pdb
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\obj\Debug\Lommeregner.csprojAssemblyReference.cache
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\obj\Debug\Lommeregner.Form1.resources
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\obj\Debug\Lommeregner.Properties.Resources.resources
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\obj\Debug\Lommeregner.csproj.GenerateResource.cache
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\obj\Debug\Lommeregner.exe
+C:\Users\mathi\source\repos\Lommeregner\Lommeregner\obj\Debug\Lommeregner.pdb
