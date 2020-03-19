@@ -14,7 +14,29 @@ namespace test
        static int locationY = 5;
        static int locationX = 5;
 
-       static void Main()
+
+        private static void buildWall()
+        {
+            for (int i = 1; i < 26; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.SetCursorPosition(0, i);
+                Console.Write("■");
+                Console.SetCursorPosition(80, i);
+                Console.Write("■");
+
+            }
+            for (int i = 1; i < 81; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.SetCursorPosition(i, 1);
+                Console.Write("■");
+                Console.SetCursorPosition(i, 25);
+                Console.Write("■");
+
+            }
+        }
+        static void Main()
         {
             buildWall();
 
@@ -70,34 +92,17 @@ namespace test
                     }
                 }
 
+                Console.Clear();
                 Console.SetCursorPosition(locationX, locationY);
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("■");
             }
         }
 
-        private static void buildWall()
-        {
-            for (int i = 1; i < 26; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.SetCursorPosition(0, i);
-                Console.Write("■");
-                Console.SetCursorPosition(80, i);
-                Console.Write("■");
-
-            }
-            for (int i = 1; i < 81; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.SetCursorPosition(i, 1);
-                Console.Write("■");
-                Console.SetCursorPosition(i, 25);
-                Console.Write("■");
-
-            }
-        }
+   
     }
+
+
     }
 
 
