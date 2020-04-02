@@ -37,26 +37,45 @@ namespace Pizza
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            MessageBox.Show("Pizzaerne i din kurv er blevet købt.");
+
+            do
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    try
+                    {
+                        dataGridView1.Rows.Remove(row);
+
+                    }
+                    catch (Exception) 
+                    {
+                        MessageBox.Show("Pizzaerne i din kurv er blevet købt.");
+
+                    }
+                }
+            } while (dataGridView1.Rows.Count > 1);
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
             {
                 dataGridView1.Rows.RemoveAt(item.Index);
             }
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             dt.Columns.AddRange(new DataColumn[5] { 
-                    new DataColumn("Brød", typeof(string)),
-                    new DataColumn("Sovs",typeof(string)),
-                new DataColumn("Kød",typeof(string)),
-                new DataColumn("Ost",typeof(string)),
-               new DataColumn("Størrelse",typeof(string))
+                new DataColumn(" ", typeof(string)),
+                new DataColumn("  ",typeof(string)),
+                new DataColumn("   ",typeof(string)),
+                new DataColumn("    ",typeof(string)),
+                new DataColumn("      ",typeof(string))
 
 
             });
@@ -73,6 +92,24 @@ namespace Pizza
         {
             dt.Rows.Add(comboBox2.Text, comboBox3.Text, comboBox4.Text, comboBox5.Text, comboBox6.Text);
             this.dataGridView1.DataSource = dt;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dt.Rows.Add(comboBox7.Text);
+            this.dataGridView1.DataSource = dt;
+
+
+        }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }
