@@ -47,6 +47,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,9 +98,9 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Kebab Pizza, 100kr",
-            "Peperoni Pizza ,120kr",
-            "Vegansk Pizza, 80kr"});
+            "Kebab Pizza",
+            "Peperoni Pizza ",
+            "Vegansk Pizza"});
             this.comboBox1.Location = new System.Drawing.Point(270, 59);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -263,12 +265,33 @@
             this.label4.Text = "Drikkevare:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(290, 248);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(108, 23);
+            this.button6.TabIndex = 20;
+            this.button6.Text = "Tjek dit beløb";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(405, 248);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 21;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(561, 280);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox7);
             this.Controls.Add(this.button5);
@@ -321,6 +344,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
