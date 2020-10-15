@@ -1,0 +1,13 @@
+C:\Users\Admin\source\repos\Kunde\Kunde\obj\Debug\netcoreapp3.1\Kunde.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Kunde\Kunde\obj\Debug\netcoreapp3.1\Kunde.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Kunde\Kunde\obj\Debug\netcoreapp3.1\Kunde.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Kunde\Kunde\obj\Debug\netcoreapp3.1\Kunde.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Kunde\Kunde\bin\Debug\netcoreapp3.1\Kunde.exe
+C:\Users\Admin\source\repos\Kunde\Kunde\bin\Debug\netcoreapp3.1\Kunde.deps.json
+C:\Users\Admin\source\repos\Kunde\Kunde\bin\Debug\netcoreapp3.1\Kunde.runtimeconfig.json
+C:\Users\Admin\source\repos\Kunde\Kunde\bin\Debug\netcoreapp3.1\Kunde.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\Kunde\Kunde\bin\Debug\netcoreapp3.1\Kunde.dll
+C:\Users\Admin\source\repos\Kunde\Kunde\bin\Debug\netcoreapp3.1\Kunde.pdb
+C:\Users\Admin\source\repos\Kunde\Kunde\obj\Debug\netcoreapp3.1\Kunde.dll
+C:\Users\Admin\source\repos\Kunde\Kunde\obj\Debug\netcoreapp3.1\Kunde.pdb
+C:\Users\Admin\source\repos\Kunde\Kunde\obj\Debug\netcoreapp3.1\Kunde.genruntimeconfig.cache
