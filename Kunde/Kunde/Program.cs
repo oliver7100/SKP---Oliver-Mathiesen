@@ -11,7 +11,7 @@ namespace Kunde
 {
     class Program
     {
-
+        //Abstract class til at share ID og counter med de andre classs
         abstract class Ordernum
         {
             public static int ID { get; set; }
@@ -26,7 +26,9 @@ namespace Kunde
 
             public string Navn { get; set; }
             public int Pris { get; set; }
+            public int Amount { get; set; }
 
+            //Counter til ID
             public Vare()
             {
                 ID = System.Threading.Interlocked.Increment(ref m_Counter);
@@ -43,8 +45,8 @@ namespace Kunde
 
             public kunde(string navn, string adresse)
             {
-                Navn = navn;
-                Adresse = adresse;
+            Navn = navn;
+           Adresse = adresse;
 
             }
 
@@ -66,97 +68,106 @@ namespace Kunde
                 List<kunde> kunde = new List<kunde>();
 
 
-                while (Menu)
+            while (Menu)
+            {
+                Console.WriteLine("==================================================");
+                Console.WriteLine("|                                                |");
+                Console.WriteLine("|             1. Registrering af Kunder          |");
+                Console.WriteLine("|             2. Registrering af Vare            |");
+                Console.WriteLine("|             3. Display Vare og Pris            |");
+                Console.WriteLine("|             4.   Sum af priserne               |");
+                Console.WriteLine("|             5.    Fjerne vare                  |");
+                Console.WriteLine("|                                                |");
+                Console.WriteLine("==================================================");
+
+
+
+                //list1.Add(new kunde(Console.ReadLine(), int.Parse(Console.ReadLine()), Console.ReadLine()));
+
+
+
+
+
+                string menu = Console.ReadLine();
+
+
+                switch (menu)
                 {
-                    Console.WriteLine("==================================================");
-                    Console.WriteLine("|                                                |");
-                    Console.WriteLine("|             1. Registrering af Kunder          |");
-                    Console.WriteLine("|             2. Registrering af Vare            |");
-                    Console.WriteLine("|             3. Display Vare og Pris            |");
-                    Console.WriteLine("|             4.   Sum af priserne               |");
-                    Console.WriteLine("|             5.    Fjerne vare                  |");
-                    Console.WriteLine("|                                                |");
-                    Console.WriteLine("==================================================");
+
+
+                    case "1":
+                        Console.Clear();
+                        Console.WriteLine("Kunder(Navn og Adresse)");
+
+                        kunde.Add(new kunde(Console.ReadLine(), Console.ReadLine()));
 
 
 
-                    //list1.Add(new kunde(Console.ReadLine(), int.Parse(Console.ReadLine()), Console.ReadLine()));
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+
+                    case "2":
+                        Console.WriteLine("Vare(Vare Navn og pris)");
+
+                        vare.Add(new Vare() { Navn = Console.ReadLine(), Pris = int.Parse(Console.ReadLine()) });
+
+
+                        Console.ReadLine();
+                        Console.Clear();
+
+                        break;
+                    case "3":
 
 
 
+                        foreach (var item in vare)
+                        {
+                            Console.WriteLine("ID:" + Ordernum.ID + "    " + "Navn:" + item.Navn + "    " + "Pris:" + item.Pris);
+
+                        }
+
+                        foreach (var item in kunde)
+                        {
+                            Console.WriteLine("ID:" + Ordernum.ID + "    " + "Kunde navn:" + item.Navn + "    " + "Adresse:" + item.Adresse);
+
+                        }
+
+                        Console.ReadLine();
+                        Console.Clear();
 
 
-                    string menu = Console.ReadLine();
+                        break;
+                    case "4":
 
-
-                    switch (menu)
-                    {
-
-
-                        case "1":
-                            Console.Clear();
-                            Console.WriteLine("Kunder");
-
-                            kunde.Add(new kunde(Console.ReadLine(), Console.ReadLine()));
-
-
-
-                            break;
-
-                        case "2":
-                            Console.WriteLine("Vare");
-
-                            vare.Add(new Vare() { Navn = Console.ReadLine(), Pris = int.Parse(Console.ReadLine()) });
-
-
-                            Console.ReadLine();
-                            Console.Clear();
-
-                            break;
-                        case "3":
-
-                            
-
-                            foreach (var item in vare)
-                            {
-                                Console.WriteLine("ID:" + Ordernum.ID + "    " + "Navn:" + item.Navn + "    " + "Pris:" + item.Pris);
-
-                            }
-
-                            foreach (var item in kunde)
-                            {
-                                    Console.WriteLine("ID:" + Ordernum.ID  +"    " +  "Kunde navn:" + item.Navn + "    " + "Adresse:" + item.Adresse);
-
-                            }
-
-                            Console.ReadLine();
-                            Console.Clear();
-
-                    
-                            break;
-                        case "4":
-
-                            int sum = 0;
-                            foreach (var Pris in vare)
-                            {
-                                sum += (vare.Select(i => i.Pris).Sum());
-
-                            }
-                            Console.WriteLine(sum);
-                            Console.ReadLine();
-                            Console.Clear();
-                            break;
+                        int sum = 0;
+                        foreach (var Pris in vare)
+                        {  
+                        }
+                        Console.WriteLine(sum);
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
                     case "5":
-                        
-                      
+                        Console.Write("Skriv et ID på den item og person du gerne ville fjerne.");
+
+                        var hello = int.Parse(Console.ReadLine());
+                        vare.RemoveAll(l => Ordernum.ID == hello);
+                        if (hello == int)
+                        {
+
+                        }
+
                         Console.ReadLine();
                         Console.Clear();
                         break;
 
                 }
-                }
+
 
             }
+
+        }
 
 
             static public void OpretKunde()
